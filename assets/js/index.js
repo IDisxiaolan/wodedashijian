@@ -1,7 +1,7 @@
 $(() => {
     const { form, layer } = layui
 
-    function getuserinfo() {
+    function getuser_info() {
         $.ajax({
             method: 'get',
             url: 'http://ajax.frontend.itheima.net/my/userinfo',
@@ -15,9 +15,10 @@ $(() => {
             }
         })
     }
-    getuserinfo()
 
-    //渲染用户头像
+    getuser_info()
+
+    //渲染用户头像和用户名
     function readerAvatar(user) {
         var name = user.nickname || user.username
         $('.nm').text(' ' + name)
